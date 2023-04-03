@@ -1,3 +1,4 @@
+-- Active: 1680180900307@@127.0.0.1@5432@softlife
 CREATE DATABASE softlife;
 
 CREATE TABLE usuarios (
