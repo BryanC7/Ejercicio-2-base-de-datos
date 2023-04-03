@@ -1,16 +1,34 @@
 import bodyParser from 'body-parser';
 import { Router } from "express";
-import pool from '../bd.js';
+import {join,dirname} from 'path';
+import {fileURLToPath} from "url";
+import { DbHandler } from '../utils/class/DbHandler.js';
 
+const __dirname = dirname(fileURLToPath(import.meta.url));
 const router = Router();
 
+router.use(bodyParser.json());       // to support JSON-encoded bodies
+router.use(bodyParser.urlencoded({     // to support URL-encoded bodies
+  extended: true
+})); 
 
-pool.query('INSERT INTO usuarios (email,password) VALUES ($1,$2) RETURNING *',['jorgito@gmail.com','1234'],(err,res)=>{
-    if (err) throw err;
-    else{
-        console.log(res.rows);
-        pool.release;
-    }
+
+
+//===========================GET INDEX=================================
+router.get('/',(req,res)=>{
+    res.sendFile(join(__dirname,'../index.html'))
+})
+
+
+//===========================POST INGRESO=================================
+router.post('/usuario',async(req,res)=>{
+    let mail = req.body.email;
+    let pass = req.body.password;
+
+    const bdhandler = new DbHandler();
+
+    await bdhandler.setUsuario(mail,pass);
+    console.log('Este se deberia ejecutar despues');
 })
 
 

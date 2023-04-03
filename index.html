@@ -10,22 +10,22 @@
 
 <body>
     <div class="register">
-        <form action="/index" method="post" class="formRegister">
+        <form action="/usuario" method="POST" class="formRegister">
             <label for="">Correo Electrónico</label>
             <input type="email" name="email" id="">
             <label for="">Password</label>
             <input type="password" name="password" id="">
-            <button>Crear</button>
+            <button type="submit">Crear</button>
         </form>
     </div>
 
     <div class="access">
-    <form action="/index" method="get" class="formAccess">
+    <form action="/login" method="POST" class="formAccess">
         <label for="">Correo Electrónico</label>
         <input type="email" name="email" id="">
         <label for="">Password</label>
         <input type="password" name="password" id="">
-        <button>Ingresar</button>
+        <button type="submit">Ingresar</button>
     </form>
 </div>
 

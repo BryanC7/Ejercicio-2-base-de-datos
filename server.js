@@ -1,6 +1,7 @@
 import express from "express";
-const app = express();
 import rutas from "./routes/routes.js";
+
+const app = express();
 
 app.use(rutas);
 
