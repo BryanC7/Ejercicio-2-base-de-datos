@@ -6,30 +6,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body>
-    <div class="register">
-        <form action="/usuario" method="POST" class="formRegister">
-            <label for="">Correo Electrónico</label>
-            <input type="email" name="email" id="">
-            <label for="">Password</label>
-            <input type="password" name="password" id="">
-            <button type="submit">Crear</button>
-        </form>
+    <div class="container-forms">
+        <div class="register">
+            <h2>Registro de usuario</h2>
+            <form action="/usuario" method="POST" class="formRegister">
+                <label for="">Correo Electrónico</label>
+                <input type="email" name="email">
+                <label for="">Password</label>
+                <input type="password" name="password">
+                <button type="submit">Crear</button>
+            </form>
+        </div>
+
+        <div class="access">
+            <h2>Ingreso a la cuenta</h2>
+            <form action="/login" method="POST" class="formAccess">
+                <label for="">Correo Electrónico</label>
+                <input type="email" name="email">
+                <label for="">Password</label>
+                <input type="password" name="password">
+                <button type="submit">Ingresar</button>
+            </form>
+        </div>
     </div>
 
-    <div class="access">
-    <form action="/login" method="POST" class="formAccess">
-        <label for="">Correo Electrónico</label>
-        <input type="email" name="email" id="">
-        <label for="">Password</label>
-        <input type="password" name="password" id="">
-        <button type="submit">Ingresar</button>
-    </form>
-</div>
-
-<a href="/listado"><button>Ver Listado de Usuarios</button></a>
+    <div class="container-listado">
+        <a href="/listado"><button>Ver Listado de Usuarios</button></a>
+    </div> 
 
 </body>
 

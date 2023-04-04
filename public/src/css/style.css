@@ -1,0 +1,33 @@
+.container-forms{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    margin-top: 15vh;
+}
+
+.register , .access{
+    display: flex;
+    flex-direction: column;
+    background-color: brown;
+    padding: 8%;
+    font-size: 15px;
+    color: azure;
+}
+
+.register h2 , .access h2{
+    margin: 0;
+    margin-bottom:25px ;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.container-listado{
+    display: flex;
+    justify-content: center;
+    margin-top: 10vh;
+}

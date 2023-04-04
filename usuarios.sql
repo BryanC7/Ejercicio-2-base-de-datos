@@ -6,3 +6,9 @@ CREATE TABLE usuarios (
     email VARCHAR(25) NOT NULL,
     password VARCHAR(25) NOT NULL
 );
+
+SELECT * FROM usuarios;
+
+DELETE from usuarios WHERE idusuario = 2;
+
+DROP TABLE usuarios;
